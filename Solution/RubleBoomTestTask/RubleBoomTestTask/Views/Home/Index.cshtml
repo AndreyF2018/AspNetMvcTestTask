@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RubleBoomTestTask.Models.TicketView>
+
+@{
+    ViewBag.Title = "Все заявки";
+}
+
+<h2>Все заявки</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Позиция
+        </th>
+        <th>
+           Месяц создания
+        </th>
+        <th>
+           Год создания
+        </th>
+        <th>
+           Количество
+        </th>
+        <th>
+            Комментарий
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.position.positionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateCreation.Month)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateCreation.Year)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantityPosition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+    <tr>
+        <td>
+            <form action="/Home/Report">
+                <button onclick="">Месячный отчёт</button>
+            </form>
+        </td>
+    </tr>
+</table>

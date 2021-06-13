@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Report";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Месячный отчёт</title>
+</head>
+<body>
+    <div>
+        <h2>Месячный отчёт</h2>
+        <form method="post" action="/Home/PostReport">
+            <table>
+                <tr>
+                    <td>
+                        <p>Год:</p>
+                    </td>
+                    <td><input type="number" name="year" value="2021" max="2099" min="1900"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Месяц:</p>
+                    </td>
+                    <td>
+                        <p>
+                            <select size="1" name="month" required>
+                                <option disabled>Номер месяца</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Показать отчёт"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+

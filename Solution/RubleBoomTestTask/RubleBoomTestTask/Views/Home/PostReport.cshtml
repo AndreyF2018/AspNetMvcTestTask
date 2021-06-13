@@ -1,0 +1,31 @@
+﻿@model IEnumerable<RubleBoomTestTask.Models.MonthlyReportView>
+
+@{
+    ViewBag.Title = "PostReport";
+}
+
+<h2>Месячный отчёт (@ViewBag.Month месяц, @ViewBag.Year год)</h2>
+
+<table class="table">
+    <tr>
+        <th>
+           Позиция
+        </th>
+        <th>
+            Количество
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.positionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.positionQuantity)
+        </td>
+    </tr>
+}
+
+</table>

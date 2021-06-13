@@ -1,0 +1,10 @@
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\Entities.dll.config
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\Entities.dll
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\Entities.pdb
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\obj\Debug\Entities.dll
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\obj\Debug\Entities.pdb
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
