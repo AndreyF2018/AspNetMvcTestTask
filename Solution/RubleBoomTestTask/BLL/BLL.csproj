@@ -39,9 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IObjectLogic.cs" />
+    <Compile Include="Interfaces\IPositionLogic.cs" />
     <Compile Include="Interfaces\ITicketLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PositionLogic.cs" />
     <Compile Include="Services\TicketLogic.cs" />
   </ItemGroup>
   <ItemGroup>

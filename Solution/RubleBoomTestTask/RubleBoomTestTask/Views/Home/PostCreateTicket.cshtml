@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Создание заявки";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Создание заявки</title>
+</head>
+<body>
+    <div>
+        <h2>Добавить новую заявку</h2>
+        <form method="post" action="/Home/PostCreateTicket">
+            <table>
+                @foreach (var item in ViewBag.AddedTickets)
+                {
+                    <tr>
+                        <td>
+                            <p><h3>@item.position.positionName</h3></p>
+                            <input type="hidden" name="id" value="@item.id" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Количество: </p>
+                        </td>
+                        <td>
+                        <input type="number" name="quantityPosition" value="1" max="999" min="1" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Комментарий:
+                        </td>
+                        <td>
+                            <input type="text" name="comment" value=""/>
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td>
+                        <input type="submit" value="Добавить заявку" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        @Html.ActionLink("Назад к списку", "Index")
+    </div>
+</body>
+</html>

@@ -9,3 +9,17 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\BLL\bin\D
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\BLL\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\BLL\obj\Debug\BLL.dll
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\BLL\obj\Debug\BLL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\obj\Debug\BLL.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\BLL.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\BLL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\DAL.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\Entities.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\EntityFramework.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\DAL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\Entities.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\EntityFramework.xml
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\obj\Debug\BLL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\DAL.dll.config
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\bin\Debug\Entities.dll.config
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\BLL\obj\Debug\BLL.csproj.CopyComplete

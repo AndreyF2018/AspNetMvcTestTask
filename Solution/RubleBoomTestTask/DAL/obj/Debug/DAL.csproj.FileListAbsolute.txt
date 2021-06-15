@@ -10,3 +10,17 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\DAL\bin\D
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\DAL\obj\Debug\DAL.dll
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\DAL\obj\Debug\DAL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\DAL.dll.config
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\DAL.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\DAL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\Entities.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\EntityFramework.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\Entities.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\EntityFramework.xml
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\obj\Debug\DAL.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\obj\Debug\DAL.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\bin\Debug\Entities.dll.config
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\DAL\obj\Debug\DAL.csproj.CopyComplete

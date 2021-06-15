@@ -12,6 +12,9 @@ namespace DAL.Interfaces
         IEnumerable<Ticket> GetAll();
         Ticket FindById(int id);
         void Create(Ticket item);
+        void Delete(int id);
+        void AddRange(IEnumerable<Ticket> ticket);
+        void Save();
         IEnumerable<MonthlyReport> MakeMonthlyReport(byte _month, short _year);
     }
 }

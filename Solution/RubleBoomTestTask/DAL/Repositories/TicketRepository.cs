@@ -13,11 +13,11 @@ namespace DAL.Repositories
     public class TicketRepository : ITicketRepository
     {
         
-        InventoryContext db;
+        private InventoryContext db;
 
-        public TicketRepository ()
+        public TicketRepository (InventoryContext context)
         {
-            db = new InventoryContext();
+            this.db = context;
         }
         public IEnumerable<Ticket> GetAll()
         {
@@ -31,8 +31,48 @@ namespace DAL.Repositories
 
         public void Create(Ticket item)
         {
-            db.Tickets.Add(item);
-           
+            if (item != null)
+            {
+
+                var comment = new SqlParameter("@Comment", item.comment);
+                var positionId = new SqlParameter("@PositionId", item.positionId);
+                var quantityPosition = new SqlParameter("@QuantityPosition", item.quantityPosition);
+                db.Database.ExecuteSqlCommand("exec AddTicket @Comment, @PositionId, @QuantityPosition", comment, positionId, quantityPosition);
+            }
+            else
+            {
+                throw new Exception("Ticket is null");
+            }
+        }
+
+        public void Delete(int id)
+        {
+            Ticket deeletedTicket = db.Tickets.Find(id);
+            if (deeletedTicket != null)
+            {
+                db.Tickets.Remove(deeletedTicket);
+            }
+            else
+            {
+                throw new Exception("Ticket is null");
+            }
+        }
+
+        public void AddRange(IEnumerable<Ticket> tickets)
+        {
+            if (tickets.Count() != 0)
+            {
+                db.Tickets.AddRange(tickets);
+            }
+            else
+            {
+                throw new Exception("Tickets list is null");
+            }
+        }
+
+        public void Save()
+        {
+            db.SaveChanges();
         }
 
         public IEnumerable<MonthlyReport> MakeMonthlyReport(byte _month, short _year)

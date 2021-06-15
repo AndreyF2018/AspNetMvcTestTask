@@ -1,0 +1,56 @@
+﻿@model Entities.Ticket
+
+@{
+    ViewBag.Title = "Удаление заявки";
+}
+
+    <h2>Удаление заявки</h2>
+
+<h3>Вы уверены, что хотите удалить заявку?</h3>
+<div>
+    <h4>Заявка</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateCreation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateCreation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position.positionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position.positionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantityPosition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantityPosition)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Назад к списку", "Index")
+        </div>
+    }
+</div>

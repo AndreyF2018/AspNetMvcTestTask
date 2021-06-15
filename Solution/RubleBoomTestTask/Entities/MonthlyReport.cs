@@ -11,8 +11,8 @@ namespace Entities
     public class MonthlyReport
     {
         [Key]
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id {get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int id { get; set; }
         public String positionName { get; set; }
 
         public int positionQuantity { get; set; }

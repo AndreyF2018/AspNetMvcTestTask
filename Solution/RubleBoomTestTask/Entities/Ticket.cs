@@ -9,13 +9,14 @@ namespace Entities
     public partial class Ticket
     {
         [Key]
-        public int id { get; private set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int id { get; set; }
 
         [StringLength(75)]
         public string comment { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime dateCreation { get; private set; }
+        public DateTime dateCreation { get; set; }
 
         public int positionId { get; set; }
 
@@ -23,23 +24,23 @@ namespace Entities
 
         public virtual Position position { get; set; }
 
-        public Ticket(string _comment, Position _position)
+        public Ticket()
         {
+
+        }
+
+        public Ticket(Position _position, int _quantityPosition, string _comment = "")
+        {
+            this.positionId = _position.id;
+            this.position = _position;
+            this.quantityPosition = _quantityPosition;
             this.comment = _comment;
             this.dateCreation = DateTime.Now;
-            this.positionId = _position.id;
-            this.position = _position;
         }
 
-        public Ticket(Position _position)
+        public override string ToString()
         {
-            this.dateCreation = DateTime.Now;
-            this.positionId = _position.id;
-            this.position = _position;
-        }
-        Ticket()
-        {
-
+            return "id = " + this.id.ToString() + ". " + this.positionId.ToString() + ". " + this.comment + " " + this.dateCreation.ToString() + " " + this.quantityPosition.ToString();
         }
     }
 }

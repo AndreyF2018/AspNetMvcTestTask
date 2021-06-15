@@ -1,0 +1,47 @@
+﻿@model Entities.Ticket
+
+@{
+    ViewBag.Title = "Создание заяки";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Создание заявки</title>
+</head>
+<body>
+    <div>
+        <h2>Добавление новой заяки</h2>
+        <p><h4>Для выбора нескольких позиций зажмите клавишу <span class="btn">Ctrl</span> или <span class="btn">Shift</span></h4></p>
+        <form method="post" action="/Home/CreateTicket">
+            <table>
+                <tr>
+                    <td>
+                        <p>Позиции: </p>
+                    </td>
+                    <td>
+                        <p>
+                            <select name="positionsId[]" size=5 multiple>
+                                <option value="@ViewBag.Positions[0].id">@ViewBag.Positions[0]</option>
+                                <option value="@ViewBag.Positions[1].id">@ViewBag.Positions[1]</option>
+                                <option value="@ViewBag.Positions[2].id">@ViewBag.Positions[2]</option>
+                                <option value="@ViewBag.Positions[3].id">@ViewBag.Positions[3]</option>
+                                <option value="@ViewBag.Positions[4].id">@ViewBag.Positions[4]</option>
+                            </select>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Далее" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div>
+        @Html.ActionLink("Назад к списку", "Index")
+    </div>
+</body>
+</html>
+

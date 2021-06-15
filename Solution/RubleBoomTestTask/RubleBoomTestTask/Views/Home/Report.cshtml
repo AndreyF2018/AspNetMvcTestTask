@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Report";
+    ViewBag.Title = "Месячный отчёт";
 }
 
 <html>
@@ -11,13 +11,15 @@
 <body>
     <div>
         <h2>Месячный отчёт</h2>
-        <form method="post" action="/Home/PostReport">
+        <form method="post" action="/Home/Report">
             <table>
                 <tr>
                     <td>
                         <p>Год:</p>
                     </td>
-                    <td><input type="number" name="year" value="2021" max="2099" min="1900"/></td>
+                    <td>
+                    <input type="number" name="year" value="2021" max="2099" min="1900"/>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -50,6 +52,9 @@
                 </tr>
             </table>
         </form>
+    </div>
+    <div>
+        @Html.ActionLink("Назад к списку", "Index")
     </div>
 </body>
 </html>

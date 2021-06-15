@@ -8,25 +8,23 @@ using BLL.Services;
 using Entities;
 using AutoMapper;
 using RubleBoomTestTask.Models;
+using System.Threading;
 
 namespace RubleBoomTestTask.Controllers
 {
     public class HomeController : Controller
     {
         private ITicketLogic ticketLogic;
+        private List<Ticket> addedTickets;
 
-        public HomeController()
+        public HomeController(ITicketLogic _ticketLogic)
         {
-            ticketLogic = new TicketLogic();
+            this.ticketLogic = _ticketLogic;
+            addedTickets = new List<Ticket>();
         }
 
         public ActionResult Index()
         {
-
-            /*
-            ViewBag.Tickets = ticketLogic.GetAll();
-            return View();
-             */
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<Ticket, TicketView>()).CreateMapper();
             var tickets = mapper.Map<IEnumerable<Ticket>, List<TicketView>>(ticketLogic.GetAll());
             return View(tickets);
@@ -41,30 +39,83 @@ namespace RubleBoomTestTask.Controllers
 
         
         [HttpPost]
-        public ActionResult PostReport(byte month, short year)
+        public ActionResult Report(byte month, short year)
         {
             ViewBag.Month = month;
             ViewBag.Year = year;
             var mapper = new MapperConfiguration(cfg => cfg.CreateMap<MonthlyReport, MonthlyReportView>()).CreateMapper();
             var report = mapper.Map<IEnumerable<MonthlyReport>, List<MonthlyReportView>>(ticketLogic.MakeMonthlyReport(month, year));
-            return View(report);
+            return View("PostReport", report);
         }
-       
-
-        /*
-        public ActionResult About()
+        
+        [HttpGet]
+        public ActionResult CreateTicket()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Positions = ticketLogic.GetAllPositions().ToArray();
 
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public Object CreateTicket(int[] positionsId)
         {
-            ViewBag.Message = "Your contact page.";
+            foreach(var item in positionsId)
+            {
+                Position position = ticketLogic.GetPosition(item);
+                Ticket ticket = new Ticket(position, 1);
+                addedTickets.Add(ticket);
+            }
+            ViewBag.AddedTickets = addedTickets;
+            TempData["AddedTickets"] = addedTickets;
+            return View("PostCreateTicket");
+        }
 
+       [HttpPost]
+       public ActionResult PostCreateTicket(int id, int[] quantityPosition, string[] comment)
+       {
+           addedTickets = (List<Ticket>)TempData["AddedTickets"];
+           if (addedTickets.Count == 0)
+           {
+               throw new Exception("Empty tickets");
+           }
+            try
+            {
+                for (int i = 0; i < addedTickets.Count; i++)
+                {
+                    int currentQuantityPosition = quantityPosition[i];
+                    string currentComment = comment[i];
+                    Ticket ticket = new Ticket(addedTickets[i].position, currentQuantityPosition, currentComment);
+                    ticketLogic.Create(ticket);
+                    ticketLogic.Save();
+
+                }
+            }
+            catch (Exception e)
+            {
+                throw new HttpException("Что-то пошло не так. " + e.Message);
+            }
+            return View("SuccessfulAddition");      
+       }
+
+        [HttpGet]
+        public ActionResult DeleteTicket()
+        {
             return View();
         }
-        */
+
+        [HttpPost]
+        public ActionResult DeleteTicket(int id)
+        {
+            try
+            {
+                ticketLogic.Delete(id);
+            }
+            catch (Exception e)
+            {
+                throw new HttpException("Что-то пошло не так. " + e.Message);
+            }
+            return View("SucessfulDeleted");
+        }
+
     }
 }

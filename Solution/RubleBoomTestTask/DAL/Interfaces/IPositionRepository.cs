@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities;
 
 namespace DAL.Interfaces
-{/*
-    interface IRepository <T>
+{
+    public interface IPositionRepository
     {
-        IEnumerable<T> GetAll();
-        T FindById(int id);
-        void Create(T item);
-
-    }]
-  * */
+        IEnumerable<Position> GetAll();
+        Position FindById(int id);
+    }
 }

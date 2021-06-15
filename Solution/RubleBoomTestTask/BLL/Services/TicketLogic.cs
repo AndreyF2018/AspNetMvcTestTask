@@ -12,25 +12,51 @@ namespace BLL.Services
 {
     public class TicketLogic : ITicketLogic
     {
-        public ITicketRepository ticketRepo;
-        public TicketLogic()
+        private UnitOfWork ticketRepo;
+
+        public TicketLogic(UnitOfWork uow)
         {
-            ticketRepo = new TicketRepository();
+            ticketRepo = uow;
         }
 
         public IEnumerable<Ticket> GetAll()
         {
-            return ticketRepo.GetAll();
+            return ticketRepo.Tickets.GetAll();
         }
 
         public Ticket FindById(int id)
         {
-            return ticketRepo.FindById(id);
+            return ticketRepo.Tickets.FindById(id);
         }
 
         public void Create(Ticket item)
         {
-            ticketRepo.Create(item);
+            ticketRepo.Tickets.Create(item);
+        }
+
+        public void Delete(int id)
+        {
+            ticketRepo.Tickets.Delete(id);
+        }
+        public void Save()
+        {
+            ticketRepo.Tickets.Save();
+        }
+
+        public Position GetPosition(int id)
+        {
+            Position position = ticketRepo.Positions.FindById(id);
+            return position;
+        }
+
+        public IEnumerable<Position> GetAllPositions()
+        {
+            return ticketRepo.Positions.GetAll();
+        }
+
+        public void AddRange(IEnumerable<Ticket> tickets)
+        {
+            ticketRepo.Tickets.AddRange(tickets);
         }
 
         public IEnumerable<MonthlyReport> MakeMonthlyReport(byte _month, short _year)

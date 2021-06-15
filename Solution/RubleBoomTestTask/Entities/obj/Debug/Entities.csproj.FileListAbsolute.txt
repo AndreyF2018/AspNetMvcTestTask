@@ -8,3 +8,13 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\obj\Debug\Entities.dll
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\obj\Debug\Entities.pdb
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\RubleBoomTestTask\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\Entities.dll.config
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\Entities.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\Entities.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.xml
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.dll
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.pdb
