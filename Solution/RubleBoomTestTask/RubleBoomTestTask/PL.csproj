@@ -192,10 +192,10 @@
     <Content Include="Views\Home\PostReport.cshtml" />
     <Content Include="Views\Home\CreateTicket.cshtml" />
     <Content Include="Views\Home\PostCreateTicket.cshtml" />
-    <Content Include="Views\Home\View.cshtml" />
     <Content Include="Views\Home\SuccessfulAddition.cshtml" />
     <Content Include="Views\Home\DeleteTicket.cshtml" />
     <Content Include="Views\Home\SucessfulDeleted.cshtml" />
+    <Content Include="Views\Home\ExceptionPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

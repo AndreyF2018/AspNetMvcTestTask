@@ -12,7 +12,14 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.comment)
+            Позиция:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position.positionName)
+        </dd>
+        <dt>
+            Комментарий:
         </dt>
 
         <dd>
@@ -20,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.dateCreation)
+            Дата создания:
         </dt>
 
         <dd>
@@ -28,15 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.position.positionName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.position.positionName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.quantityPosition)
+            Количество:
         </dt>
 
         <dd>

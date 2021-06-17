@@ -26,7 +26,15 @@ namespace DAL.Repositories
 
         public Ticket FindById(int id)
         {
-            return db.Tickets.Find(id);
+            Ticket foundTicket = db.Tickets.Find(id);
+            if (foundTicket != null)
+            {
+                return db.Tickets.Find(id);
+            }
+            else
+            {
+                throw new Exception("Found ticket is null");
+            }
         }
 
         public void Create(Ticket item)
@@ -54,7 +62,7 @@ namespace DAL.Repositories
             }
             else
             {
-                throw new Exception("Ticket is null");
+                throw new Exception("Deleted ticket is null");
             }
         }
 

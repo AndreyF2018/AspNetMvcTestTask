@@ -1,0 +1,8 @@
+USE InventoryDB
+
+GO
+
+CREATE TRIGGER make_read_only_positions ON Positions 
+INSTEAD OF INSERT, UPDATE, DELETE
+AS
+ROLLBACK

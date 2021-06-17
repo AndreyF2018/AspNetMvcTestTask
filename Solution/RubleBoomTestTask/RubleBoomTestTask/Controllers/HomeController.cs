@@ -92,27 +92,33 @@ namespace RubleBoomTestTask.Controllers
             }
             catch (Exception e)
             {
-                throw new HttpException("Что-то пошло не так. " + e.Message);
+                ViewBag.Exception = e;
+                return View("ExceptionPage");
             }
             return View("SuccessfulAddition");      
        }
 
         [HttpGet]
-        public ActionResult DeleteTicket()
+        public ActionResult DeleteTicket(long id)
         {
-            return View();
+            Ticket deletedTicket = ticketLogic.FindById((int)id);
+            return View(deletedTicket);
         }
 
         [HttpPost]
         public ActionResult DeleteTicket(int id)
         {
+            Ticket deletedTicket = ticketLogic.FindById(id);
+            ViewBag.DeletedTicket = deletedTicket;
             try
             {
                 ticketLogic.Delete(id);
+                ticketLogic.Save();
             }
             catch (Exception e)
             {
-                throw new HttpException("Что-то пошло не так. " + e.Message);
+                ViewBag.Exception = e;
+                return View("ExceptionPage");
             }
             return View("SucessfulDeleted");
         }
