@@ -101,17 +101,25 @@ namespace RubleBoomTestTask.Controllers
         [HttpGet]
         public ActionResult DeleteTicket(long id)
         {
-            Ticket deletedTicket = ticketLogic.FindById((int)id);
-            return View(deletedTicket);
+            try
+            {
+                Ticket deletedTicket = ticketLogic.FindById((int)id);
+                return View(deletedTicket);
+            }
+            catch (Exception e)
+            {
+                ViewBag.Exception = e;
+                return View("ExceptionPage");
+            }
         }
 
         [HttpPost]
         public ActionResult DeleteTicket(int id)
         {
-            Ticket deletedTicket = ticketLogic.FindById(id);
-            ViewBag.DeletedTicket = deletedTicket;
             try
             {
+                Ticket deletedTicket = ticketLogic.FindById(id);
+                ViewBag.DeletedTicket = deletedTicket;
                 ticketLogic.Delete(id);
                 ticketLogic.Save();
             }

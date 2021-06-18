@@ -15,6 +15,7 @@ C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFra
 C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.SqlServer.dll
 C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.xml
 C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\bin\Debug\EntityFramework.SqlServer.xml
-C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
 C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.dll
 C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.pdb
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Git\AspNetMvcTestTask\Solution\RubleBoomTestTask\Entities\obj\Debug\Entities.csproj.CopyComplete
